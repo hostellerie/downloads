@@ -1145,6 +1145,10 @@ a.dlbtn-green:active {
 .dlm-v14-catalog #dlm_cat_part {margin:0 0 1.25rem;}
 .dlm-v14-catalog #dlm_cat_part ul {display:flex; flex-wrap:wrap; gap:.55rem; list-style:none; padding:0; margin:0;}
 .dlm-v14-catalog #dlm_cat_part ul li {margin:0; padding:.5rem .75rem; background:#fff; border:1px solid var(--dlm-v14-border); border-radius:9px; display:flex; gap:.3rem; align-items:center;}
+.dlm-v14-catalog #dlm_cat_part .dlm-v14-category-link {display:inline-flex;align-items:center;gap:.5rem;min-height:44px;}
+.dlm-v14-category-link > a:first-child {display:inline-flex;flex:none;align-items:center;}
+.dlm-v14-category-link > a:first-child img {display:block;width:28px;height:28px;object-fit:contain;}
+.dlm-v14-category-count {font-size:.82rem;color:#667991;white-space:nowrap;}
 .dlm-v14-list-header {display:flex; align-items:center; justify-content:space-between; gap:.75rem; flex-wrap:wrap; margin:0 0 .8rem;}
 .dlm-v14-catalog #dlm_filelist_info {margin:0; padding:0;}
 .dlm-v14-catalog .header-listcontrol {margin:0; padding:.65rem; border:1px solid var(--dlm-v14-border); border-radius:8px; background:#f2f6fa;}
