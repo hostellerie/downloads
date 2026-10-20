@@ -4,12 +4,12 @@
 
 
 
-<div class="pluginRow{cssid}" style="padding:10px; height:1%; overflow:hidden;">
+<div class="pluginRow{cssid} dlm-catalog-card">
 
 
 
     <div class="dlm_filelist_down_btn">
-        <a href="{visitfile_url}" title="{download_title}" class="dlbtn-green">{lang_download_button}</a>
+        <a href="{visitfile_url}" title="{download_title}" class="dlbtn-green dlm-catalog-download">{lang_download_button}</a>
     </div>
 
     <div class="dlm_filelist_heading_no_tn">
