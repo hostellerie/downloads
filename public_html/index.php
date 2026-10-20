@@ -345,7 +345,7 @@ function dlformat(&$T, &$A, $isListing=false, $cid=DLM_ROOTID)
     if ($_DLM_CONF['download_useshots'] && !empty($A['imgurl'])) {
         $imgurl = $_DLM_CONF['snapcat_url'] . '/' . DLM_htmlspecialchars($A['imgurl']);
     } else {
-        $imgurl = $_CONF['site_url'] . '/downloads/images/download.png';
+        $imgurl = $_CONF['site_url'] . '/downloads/images/default-category.svg';
     }
     $category_image = COM_createImage($imgurl, $cat_title,
                                       array('width' => $_DLM_CONF['download_shotwidth']));
@@ -602,7 +602,7 @@ function makeCategoryPart($cid, $search_query = '')
             if ($ele['imgurl'] && $ele['imgurl'] != "http://") {
                 $imgurl = $_DLM_CONF['snapcat_url'] . '/' . DLM_htmlspecialchars($ele['imgurl']);
             } else {
-                $imgurl = $_CONF['site_url'] . '/downloads/images/download.png';
+                $imgurl = $_CONF['site_url'] . '/downloads/images/default-category.svg';
             }
             $category_image_link = COM_createImage($imgurl, $chtitle,
                                                    array('width' => $_DLM_CONF['download_shotwidth']));
