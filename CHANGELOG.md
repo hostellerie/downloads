@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 — development branch
+
+- Versioned the installable distribution as Downloads 1.4.0.
+- Excluded the `tests/` directory from the distributed ZIP while retaining the test scripts in GitHub and CI.
+- Added packaging validation that rejects archives containing tests.
+
+
 ## 1.3.2 — in development
 
 - Fix admin preview with no image taking up only the left grid column; description and details can use full width.
