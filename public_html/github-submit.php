@@ -78,13 +78,20 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
                         }
                     }
                     $uid = (int) $_USER['uid'];
-                    $recent = DB_query("SELECT COUNT(*) AS count_proposals FROM {$_TABLES['downloadgithubproposals']} " .
-                                       "WHERE owner_id=$uid AND created_at > " . (time() - 86400));
-                    $recentRow = $recent ? DB_fetchArray($recent) : array('count_proposals' => 99);
-                    if ($selected === null || $title === '' || strlen($title) > 100 ||
+                    $limitReached = false;
+                    if (!SEC_hasRights('downloads.edit')) {
+                        $recent = DB_query("SELECT COUNT(*) AS count_proposals FROM {$_TABLES['downloadgithubproposals']} " .
+                                           "WHERE owner_id=$uid AND created_at > " . (time() - 86400));
+                        // Fail closed for regular users if counting fails.
+                        $recentRow = $recent ? DB_fetchArray($recent) : array('count_proposals' => 5);
+                        $limitReached = (int) $recentRow['count_proposals'] >= 5;
+                    }
+                    if ($limitReached) {
+                        $postContent .= '<p>Daily submission limit reached (5 proposals per 24 hours).</p>';
+                    } elseif ($selected === null || $title === '' || strlen($title) > 100 ||
                         $description === '' || strlen($description) > 4000 ||
-                        (int) $selected['size'] > 52428800 || (int) $recentRow['count_proposals'] >= 5) {
-                        $postContent .= '<p>Invalid proposal or daily submission limit reached (5 per day).</p>';
+                        (int) $selected['size'] > 52428800) {
+                        $postContent .= '<p>Invalid proposal. Check the selected ZIP asset, title and description.</p>';
                     } else {
                         $repository = DB_escapeString($release['repository']);
                         $releaseUrl = DB_escapeString($release['url']);
