@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Provide separate short-description and full-details fields for GitHub Release proposals, matching the existing two-field model of standard Downloads submissions. Preserve complete GitHub release notes in the native moderation `detail` field up to a validated 60,000-byte limit; avoid silent 3,500-byte truncation, and preview full notes.
+
 - Exempt Downloads editors (`downloads.edit`) from the GitHub proposal limit of five submissions per rolling 24 hours; keep the limit for regular users and distinguish quota errors from invalid submissions.
 
 - Render GitHub release Markdown in the administrative submission and download preview using the same safe renderer as public download pages; retain normal GLText previews for non-GitHub downloads.
