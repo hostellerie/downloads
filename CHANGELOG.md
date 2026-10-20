@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Add a configurable default image URL for missing download snapshots (#9), shipping a neutral SVG; use it in list and detail views without lightbox and register the new setting on upgrade.
+
 - Rebuild public listing templates around semantic responsive cards (with and without thumbnails), removing the duplicated Downloads heading and obsolete float-based layout; replace the earlier catalog CSS overrides with a dedicated, scoped layout.
 
 - Refresh public Downloads directory with responsive software-catalog cards, category navigation, search, sorting controls, thumbnails and prominent download buttons; preserve existing actions and URLs.
