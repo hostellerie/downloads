@@ -1,6 +1,6 @@
 <!-- Downloads public catalog card -->
 <article class="dlm-v14-card">
-  <div class="dlm-v14-media dlm-v14-media-empty"><span class="dlm-v14-placeholder" aria-hidden="true">&#8681;</span>{snaplinkicon}</div>
+  <div class="dlm-v14-media dlm-v14-media-empty"><img src="{thumbnail_url}" alt="" aria-hidden="true">{snaplinkicon}</div>
   <div class="dlm-v14-content">
     <h3 class="dlm-v14-title"><a href="{filedetail_url}" title="{dtitle}">{dtitle}</a> {newdownload}{popdownload}</h3>
     <div class="dlm-v14-category">{lang_category}: {category_path}</div>
