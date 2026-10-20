@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Redesign individual download pages with responsive compact metadata, thumbnail/default image, prominent download action, full-width description and release notes, and a separated checksum/actions footer. Retain existing project history, extensions, and comments.
+
 - Add a configurable default image URL for missing download snapshots (#9), shipping a neutral SVG; use it in list and detail views without lightbox and register the new setting on upgrade.
 
 - Rebuild public listing templates around semantic responsive cards (with and without thumbnails), removing the duplicated Downloads heading and obsolete float-based layout; replace the earlier catalog CSS overrides with a dedicated, scoped layout.
