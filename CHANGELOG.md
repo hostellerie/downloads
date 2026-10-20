@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Rebuild public listing templates around semantic responsive cards (with and without thumbnails), removing the duplicated Downloads heading and obsolete float-based layout; replace the earlier catalog CSS overrides with a dedicated, scoped layout.
+
 - Refresh public Downloads directory with responsive software-catalog cards, category navigation, search, sorting controls, thumbnails and prominent download buttons; preserve existing actions and URLs.
 
 - Provide separate short-description and full-details fields for GitHub Release proposals, matching the existing two-field model of standard Downloads submissions. Preserve complete GitHub release notes in the native moderation `detail` field up to a validated 60,000-byte limit; avoid silent 3,500-byte truncation, and preview full notes.
