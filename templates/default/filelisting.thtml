@@ -1,6 +1,8 @@
 
 <!-- start filelisting.thtml -->
 {block_header}
+<div class="dlm-catalog" id="dlm-catalog">
+  <header class="dlm-catalog-heading"><div><h2>Downloads</h2><p>Plugins, themes and resources for Geeklog</p></div></header>
 
 <div id="dlm_cat_path">{category_path_link}</div>
 
@@ -14,7 +16,7 @@
 
 {sort_menu}
 
-{filelisting_records}
+<div class="dlm-catalog-results">{filelisting_records}</div>
 
 <div style="padding:10px;">{page_navigation}</div>
 
@@ -22,5 +24,6 @@
 
 {comment_records}
 
+</div>
 {block_footer}
 <!-- end filelisting.thtml -->
