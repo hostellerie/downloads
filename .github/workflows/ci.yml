@@ -5,6 +5,7 @@ on:
     branches:
       - downloads_1.3.1
       - develop_1.3.2
+      - develop_1.4.0
     paths-ignore:
       - 'dist/**'
   workflow_dispatch:
