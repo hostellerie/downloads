@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Exempt Downloads editors (`downloads.edit`) from the GitHub proposal limit of five submissions per rolling 24 hours; keep the limit for regular users and distinguish quota errors from invalid submissions.
+
 - Render GitHub release Markdown in the administrative submission and download preview using the same safe renderer as public download pages; retain normal GLText previews for non-GitHub downloads.
 
 - Versioned the installable distribution as Downloads 1.4.0.
