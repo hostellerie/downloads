@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Render GitHub release Markdown in the administrative submission and download preview using the same safe renderer as public download pages; retain normal GLText previews for non-GitHub downloads.
+
 - Versioned the installable distribution as Downloads 1.4.0.
 - Excluded the `tests/` directory from the distributed ZIP while retaining the test scripts in GitHub and CI.
 - Added packaging validation that rejects archives containing tests.
