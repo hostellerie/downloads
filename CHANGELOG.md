@@ -2,6 +2,8 @@
 
 ## 1.4.0 — development branch
 
+- Replace legacy green default category/download arrow artwork with a neutral folder SVG matching the default download image; simplify category link markup and align icon sizes without affecting custom category snapshots.
+
 - Redesign individual download pages with responsive compact metadata, thumbnail/default image, prominent download action, full-width description and release notes, and a separated checksum/actions footer. Retain existing project history, extensions, and comments.
 
 - Add a configurable default image URL for missing download snapshots (#9), shipping a neutral SVG; use it in list and detail views without lightbox and register the new setting on upgrade.
