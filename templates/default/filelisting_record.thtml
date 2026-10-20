@@ -4,12 +4,12 @@
 
 
 
-<div class="pluginRow{cssid}" style="padding:10px; height:1%; overflow:hidden;">
+<div class="pluginRow{cssid} dlm-catalog-card">
     <div class="dlm_snap_wrapper">
 {snapshot}{mg_autotag}
     </div>
-    <div class="dlm_filelist_down_btn">
-        <a href="{visitfile_url}" title="{download_title}" class="dlbtn-green">{lang_download_button}</a>
+    <div class="dlm_filelist_down_btn dlm-catalog-action">
+        <a href="{visitfile_url}" title="{download_title}" class="dlbtn-green dlm-catalog-download">{lang_download_button}</a>
     </div>
 
     <div class="dlm_filelist_heading">
@@ -41,7 +41,7 @@
     <div class="dlm_filelist_main">
         <div class="dlm_description">{file_description}</div>
 
-        <div class="dlm_filelist_footer">
+        <div class="dlm_filelist_footer dlm-catalog-links">
             <a href="{visitfile_url}">{lang_download}</a>&nbsp;&nbsp;|&nbsp;
             <span style="display:{show_comments};">{comment_link}&nbsp;&nbsp;|&nbsp;</span>
             <a href="{filedetail_url}">{lang_filelink}</a>&nbsp;&nbsp;|&nbsp;
