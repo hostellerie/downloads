@@ -404,13 +404,20 @@ function dlformat(&$T, &$A, $isListing=false, $cid=DLM_ROOTID)
             $T->parse('snaplinkicon', 'tsnaplinkicon');
         }
     } else {
-        $tnimgurl = $_CONF['site_url'] . '/downloads/images/blank.png';
+        $tnimgurl = !empty($_DLM_CONF['default_image_url'])
+            ? trim($_DLM_CONF['default_image_url'])
+            : rtrim($_CONF['site_url'], '/') . '/downloads/images/default-download.svg';
+        // Only allow safe site-relative paths or HTTPS image URLs.
+        if (!preg_match('~^(https://[^\\s"<>]+|/[^/\\s"<>][^\\s"<>]*)$~i', $tnimgurl)) {
+            $tnimgurl = rtrim($_CONF['site_url'], '/') . '/downloads/images/default-download.svg';
+        }
+        $tnimgurl = DLM_htmlspecialchars($tnimgurl);
         $T->set_var('thumbnail_url',        $tnimgurl);
         $T->set_var('snapshot_url',         $_CONF['site_url'] . '/downloads/index.php');
         $T->set_var('snapshot_sizeattr',    'width="200" height="200" ');
         $T->set_var('show_snapshoticon',    'none');
         $T->set_var('show_snapshoticon_na', '');
-        // There is no actual image to open: render an inert grey placeholder.
+        // Default image is decorative; never create a lightbox link.
         $T->parse('snapshot', 'tplaceholder');
         $T->set_var('snaplinkicon', '');
         $T->set_var('mg_autotag',   '');
